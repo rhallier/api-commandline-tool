@@ -21,6 +21,10 @@ backenddetection:
     method: POST
     endpoint: /controller/restui/customExitPoint/getAllCustomExitPoints
     payload: {\"attachedEntity\":{\"entityType\":\"APPLICATION\",\"entityId\":{{a:application}}},\"agentType\":\"APP_AGENT\"}
+  update:
+    method: POST
+    endpoint: /controller/restui/backendConfig/updateBackendDiscoveryConfig
+
 action:
   title: Import/Export actions from an application
   description: Import or export all actions in the specified application to a JSON file.
