@@ -1,3 +1,26 @@
+backenddetection:
+  title: Backend detection
+  description: Backend detection
+  list:
+    title: List backend detections
+    description: List backend detections
+    example: -a 15
+    method: GET
+    endpoint: /controller/restui/backendConfig/getAllSummaryBackendMatchPointConfigsUnderApplication/{{a:application}}
+  listJava:
+    title: List java backend detections
+    description: List java backend detections
+    example: -a 15
+    method: POST
+    endpoint: /controller/restui/backendConfig/getBackendDiscoveryConfigs
+    payload: {\"attachedEntity\":{\"entityType\":\"APPLICATION\",\"entityId\":{{a:application}}},\"agentType\":\"APP_AGENT\"}
+  listJavaCEP:
+    title: List java custom exit points
+    description: List java custom exit points
+    example: -a 15
+    method: POST
+    endpoint: /controller/restui/customExitPoint/getAllCustomExitPoints
+    payload: {\"attachedEntity\":{\"entityType\":\"APPLICATION\",\"entityId\":{{a:application}}},\"agentType\":\"APP_AGENT\"}
 action:
   title: Import/Export actions from an application
   description: Import or export all actions in the specified application to a JSON file.
